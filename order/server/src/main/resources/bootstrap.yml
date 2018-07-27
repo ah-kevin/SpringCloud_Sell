@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: order
+  rabbitmq:
+    host: 192.168.76.61
+    port: 5672
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: config
+  rabbitmq:
+    host: 192.168.76.61
+    port: 5672
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://192.168.76.61:8888/bjke/config-repo.git
+          username: bjke
+          password: sta6023728
+          basedir: /Users/lennon/Desktop/SpringCloud_Sell/config/basedir
+eureka:
+   client:
+     serviceUrl:
+       defaultZone: http://localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
