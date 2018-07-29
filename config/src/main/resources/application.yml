@@ -11,11 +11,12 @@ spring:
           uri: http://192.168.76.61:8888/bjke/config-repo.git
           username: bjke
           password: sta6023728
-          basedir: /Users/lennon/Desktop/SpringCloud_Sell/config/basedir
 eureka:
    client:
      serviceUrl:
-       defaultZone: http://localhost:8761/eureka/
+       defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+   instance:
+     prefer-ip-address: true
 management:
   endpoints:
     web:

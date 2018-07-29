@@ -3,6 +3,7 @@ package com.lennon.product.controller;
 import com.lennon.product.VO.ProductInfoVO;
 import com.lennon.product.VO.ProductVO;
 import com.lennon.product.VO.ResultVO;
+import com.lennon.product.common.DecreaseStockInput;
 import com.lennon.product.dataobject.ProductCategory;
 import com.lennon.product.dataobject.ProductInfo;
 import com.lennon.product.dto.CartDTO;
@@ -72,7 +73,7 @@ public class ProductController {
     }
 
     @PostMapping("/decreaseStock")
-    public void decreaseStock(@RequestBody List<CartDTO> cartDTOList){
-        productService.decreaseStock(cartDTOList);
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList){
+        productService.decreaseStock(decreaseStockInputList);
     }
 }

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: product
+  cloud:
+    config:
+      discovery:
+        enabled: false
+        service-id: CONFIG
+      profile: dev
+      uri: http://192.168.84.10:55223/
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.84.10:8761/eureka/,http://192.168.84.10:8762/eureka/
