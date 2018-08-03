@@ -14,6 +14,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -44,5 +45,8 @@ public class OrderController {
         map.put("orderId",createResult.getOrderId());
         return ResultVOUtil.success(map);
     }
-
+    @PostMapping("/finish")
+    public ResultVO finish(@RequestParam("orderId") String orderId){
+        return ResultVOUtil.success(orderService.finish(orderId));
+    }
 }

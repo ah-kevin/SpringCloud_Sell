@@ -1,6 +1,6 @@
 spring:
   application:
-    name: product
+    name: user
   cloud:
     config:
       discovery:

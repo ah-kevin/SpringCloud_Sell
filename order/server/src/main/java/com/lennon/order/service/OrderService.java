@@ -11,8 +11,8 @@ public interface OrderService {
 //    Page<OrderDTO> findList(String buyerOpenid, Pageable pageable);
 //    /*取消订单*/
 //    OrderDTO cancel(OrderDTO orderDTO);
-//    /*完结订单*/
-//    OrderDTO finish(OrderDTO orderDTO);
+    /*完结订单(只能卖家操作)*/
+    OrderDTO finish(String orderId);
 //    /*支付订单*/
 //    OrderDTO paid(OrderDTO orderDTO);
 }

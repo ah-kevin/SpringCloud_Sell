@@ -35,8 +35,8 @@ public class TokenFilter extends ZuulFilter {
         //这里从url参数里获取,也可以从cookie,header里面获取
         String token = request.getParameter("token");
         if(StringUtils.isEmpty(token)){
-            requestContext.setSendZuulResponse(false);
-            requestContext.setResponseStatusCode(HttpStatus.SC_UNAUTHORIZED);
+//            requestContext.setSendZuulResponse(false);
+//            requestContext.setResponseStatusCode(HttpStatus.SC_UNAUTHORIZED);
         }
         return null;
     }
